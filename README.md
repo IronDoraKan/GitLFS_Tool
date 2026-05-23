@@ -1,23 +1,24 @@
 # GitForge Toolkit
 
-GitForge Toolkit is a portable Windows Batch toolkit for quickly initializing Git repositories with Git LFS support and customizable `.gitignore` management.
+GitForge Toolkit 是一套可攜式的 Windows Batch 工具，用於快速建立 Git Repository、初始化 Git LFS，以及自動化管理 `.gitignore` 與 LFS 規則。
 
-This toolkit is designed for:
+本工具特別適合：
 
-- Git Repository Initialization
-- Git LFS Initialization
-- Externalized LFS Rules
-- Externalized `.gitignore` Rules
-- Portable Project Bootstrap
-- Engineering / CAD / AI / LLM Workspace Setup
+- CAD 專案
+- AI / LLM 專案
+- Docker 專案
+- Obsidian Vault
+- 工程資料管理
+- 大型檔案版本控制
+- 本地知識庫管理
 
 ---
 
-# Features
+# 功能特色
 
-## Git Initialization
+## Git Repository 初始化
 
-Automatically initialize local Git repositories.
+快速初始化 Git Repository：
 
 ```bat
 git init
@@ -25,25 +26,37 @@ git init
 
 ---
 
-## Git LFS Initialization
+## Git LFS 初始化
 
-Initialize Git LFS support for large file version control.
+快速啟用 Git LFS：
 
 ```bat
 git lfs install
 ```
 
+適合管理大型檔案：
+
+- CAD
+- PSD
+- AI
+- ZIP
+- STEP
+- SolidWorks
+- PDF
+
 ---
 
-## External LFS Rule Management
+## 外部化 LFS 規則管理
 
-LFS tracking rules are managed through:
+LFS 規則透過：
 
 ```plaintext
 lfs_rules.ini
 ```
 
-Each line represents one tracking rule:
+進行管理。
+
+每一行代表一個規則：
 
 ```ini
 *.psd
@@ -52,19 +65,21 @@ Each line represents one tracking rule:
 *.zip
 ```
 
-No need to modify the BAT file directly.
+不需要修改 BAT 主程式。
 
 ---
 
-## External .gitignore Management
+## 外部化 .gitignore 管理
 
-Ignore rules are managed through:
+忽略規則透過：
 
 ```plaintext
 gitignore_rules.ini
 ```
 
-Each line represents one ignore rule:
+管理。
+
+每一行代表一個忽略項目：
 
 ```ini
 .vscode/
@@ -73,7 +88,7 @@ node_modules/
 cache/
 ```
 
-The toolkit automatically generates:
+系統會自動產生：
 
 ```plaintext
 .gitignore
@@ -81,18 +96,18 @@ The toolkit automatically generates:
 
 ---
 
-## One-Click Full Initialization
+## 一鍵完整初始化
 
-Complete setup process:
+可一次完成：
 
-1. Initialize Git
-2. Initialize Git LFS
-3. Apply LFS Rules
-4. Generate `.gitignore`
+1. Git 初始化
+2. Git LFS 初始化
+3. 套用 LFS 規則
+4. 建立 `.gitignore`
 
 ---
 
-# Project Structure
+# 專案結構
 
 ```plaintext
 GitForgeToolkit/
@@ -105,23 +120,23 @@ GitForgeToolkit/
 
 ---
 
-# Usage
+# 使用方式
 
 ## Step 1
 
-Download the project.
+下載專案。
 
 ---
 
 ## Step 2
 
-Place the toolkit into your project folder.
+將整個工具放入專案資料夾根目錄。
 
 ---
 
 ## Step 3
 
-Run:
+執行：
 
 ```plaintext
 GitForgeToolkit.bat
@@ -129,71 +144,76 @@ GitForgeToolkit.bat
 
 ---
 
-# Menu
+# 主選單功能
 
 ```plaintext
-1. Initialize Git
-2. Initialize Git LFS
-3. Apply LFS Rules
-4. Full Initialization
-5. View Git/LFS Status
-6. Generate .gitignore
-7. Generate Default INI Files
-0. Exit
+1. 初始化 Git
+2. 初始化 Git LFS
+3. 套用 LFS 規則
+4. Git + Git LFS 全套初始化
+5. 查看 Git / LFS 狀態
+6. 建立 .gitignore
+7. 建立預設 INI 設定檔
+0. 離開
 ```
 
 ---
 
-# Example Use Cases
+# 適用情境
 
-## CAD Projects
+## CAD / 工程專案
 
-Supports large engineering files:
+適合管理：
 
 - STEP
-- SolidWorks
 - DWG
-- AI
+- SolidWorks
 - PSD
+- AI
+
+大型工程檔案。
 
 ---
 
-## AI / LLM Projects
+## AI / LLM 專案
 
-Useful for:
+適合：
 
-- Obsidian Vaults
+- Obsidian Vault
 - LLM Wiki
-- AI Agent Workspaces
-- Docker Projects
-- Python Environments
+- AI Agent Workspace
+- Docker Workspace
+- Python 專案
 
 ---
 
-## Software Development
+## 軟體開發專案
 
-Supports:
+支援：
 
 - Visual Studio
 - VSCode
-- Node.js
 - Python
+- Node.js
 - Docker
 
 ---
 
-# Why External Rule Files?
+# 為什麼使用外部規則檔？
 
-Instead of hardcoding rules inside BAT scripts:
+相比將規則直接寫死在 BAT：
 
-- Easier maintenance
-- Easier customization
-- Easier team collaboration
-- Cleaner project structure
+## 優點
+
+- 更容易維護
+- 更容易修改
+- 更容易團隊協作
+- 專案結構更乾淨
+- 不需要修改主程式
 
 ---
 
-# Requirements
+# 系統需求
 
 - Windows
 - Git
@@ -201,28 +221,28 @@ Instead of hardcoding rules inside BAT scripts:
 
 ---
 
-# Recommended Encoding
+# 建議編碼設定
 
-For best compatibility:
+為避免 CMD 中文亂碼問題：
 
 ```plaintext
-BAT Encoding : ANSI / Big5
-Code Page    : 950
+BAT 編碼：ANSI / Big5
+Code Page：950
 ```
 
 ---
 
-# Future Plans
+# 未來擴充方向
 
-Possible future expansions:
+未來可擴充：
 
-- GitHub API Integration
-- Gitea API Integration
-- Auto Remote Setup
-- Auto Commit Templates
-- Project Profiles
-- PowerShell Edition
-- GUI Edition
+- GitHub API 整合
+- Gitea API 整合
+- 自動 Remote 設定
+- 自動 Commit Template
+- 專案類型 Profile
+- PowerShell 版本
+- GUI 圖形化版本
 
 ---
 
